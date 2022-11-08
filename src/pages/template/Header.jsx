@@ -1,8 +1,20 @@
 export default function() {
 
   return (
-    <header className="flex justify-center items-center h-[5rem] bg-white border">
-      <button className="w-[8rem] h-[3rem] bg-orange-500 px-2 py-1 text-white rounded-md">meu perfil</button>
+    <header className="flex justify-between items-center h-[5rem] bg-white border w-full">
+
+      <div></div>
+
+      <div></div>
+      
+      <ul className="mx-6 flex gap-x-4">
+        <li className="px-4 py-2 bg-primary text-white rounded-md flex justify-center items-center">
+          ajuda
+        </li>
+        <li className="px-4 py-2 bg-primary text-white rounded-md flex justify-center items-center">
+          meu perfil
+        </li>
+      </ul>
     </header>
   )
 }

@@ -1,13 +1,15 @@
 import Header from './template/Header'
+import SideBar from './template/SideBar'
 
 export default function () {
 
   return (
     <div className="grid">
-      {/* <aside className="fixed bg-white border w-[10rem] h-[100vh]"></aside> */}
-    
+      <SideBar />
       <Header />
-      <main className="bg-blue-50 h-[40rem]"></main>
+      <main className="bg-blue-50 h-[40rem]">
+
+      </main>
     </div>
   )
 }
