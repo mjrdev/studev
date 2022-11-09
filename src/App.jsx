@@ -1,10 +1,15 @@
-import Home from './pages/Home'
+import Home from './pages/Home';
+import { ApplicationContext } from './contexts/Application';
 
 function App() {
 
+  let name = 'Manoel';
+
   return (
     <div>
-      <Home />
+      <ApplicationContext.Provider value={{name: ''}}>
+        <Home />
+      </ApplicationContext.Provider>
     </div>
   )
 }

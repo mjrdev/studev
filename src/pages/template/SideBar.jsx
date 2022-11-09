@@ -1,8 +1,14 @@
+import React, { useContext } from 'react';
+
+import { ApplicationContext } from '../../contexts/Application';
+
 import { BsBook } from 'react-icons/bs';
 import { AiOutlinePlusCircle, AiOutlineShoppingCart } from 'react-icons/ai';
 import { TfiPanel } from 'react-icons/tfi';
 
 export default function () {
+
+  const { name } = useContext(ApplicationContext);
   
   const options = [
     {
@@ -36,7 +42,7 @@ export default function () {
         
       <div className='flex flex-col my-5 px-5'>
         <h1 className="text-2xl font-bold">Studev</h1>
-        <p className='text-md font-light'>Olá My Name, seja bem vindo!</p>
+        <p className='text-md font-light'>Olá {name}, seja bem vindo!</p>
       </div>
 
       <ul className=' cursor-pointer font-medium w-full'>
