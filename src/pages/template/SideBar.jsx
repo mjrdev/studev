@@ -32,12 +32,11 @@ export default function () {
   })
 
   return (
-    <aside className="
-      fixed bg-gray-50 border w-[18rem] h-[100vh] hover:w-[20rem] transition-all flex flex-col items-start justify-start">
+    <aside className="z-0 h-[100vh] w-[20rem] bg-gray-50 border hover:w-[23rem] transition-all flex flex-col items-start justify-start">
         
       <div className='flex flex-col my-5 px-5'>
         <h1 className="text-2xl font-bold">Studev</h1>
-        <p className='text-md font-light'>Olá $name, seja bem vindo!</p>
+        <p className='text-md font-light'>Olá My Name, seja bem vindo!</p>
       </div>
 
       <ul className=' cursor-pointer font-medium w-full'>

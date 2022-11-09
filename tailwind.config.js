@@ -10,7 +10,8 @@ module.exports = {
         'mont': ['Montserrat', 'Arial', 'sans-serif']
       },
       colors: {
-        primary: '#1e6cd9'
+        primary: '#1e6cd9',
+        'primary-hover': '#125ec7',
       }
     },
   },

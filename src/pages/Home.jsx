@@ -1,15 +1,26 @@
-import Header from './template/Header'
-import SideBar from './template/SideBar'
+import Header from './template/Header';
+import SideBar from './template/SideBar';
+
+import Course from './home/Courses';
+import Panel from './home/Panel';
 
 export default function () {
 
-  return (
-    <div className="grid">
-      <SideBar />
-      <Header />
-      <main className="bg-blue-50 h-[40rem]">
+  const main = [
+    <Course />, <Panel />
+  ];
 
-      </main>
+  const mainSelect = 0;
+
+  return (
+    <div className="flex flex-col max-w-[1920px]">
+      <Header/>
+      <div className='flex'>
+        <SideBar/>
+        <section className=" pt-[5rem] w-full">
+          {main[mainSelect]}
+        </section>
+      </div>
     </div>
   )
 }
