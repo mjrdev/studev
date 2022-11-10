@@ -1,15 +1,15 @@
-import Home from './pages/Home';
-import { ApplicationContext } from './contexts/Application';
+
+import { ApplicationProvider } from './contexts/Application';
+
+import { AppRoutes } from './router.jsx';
 
 function App() {
 
-  let name = 'Manoel';
-
   return (
     <div>
-      <ApplicationContext.Provider value={{name: ''}}>
-        <Home />
-      </ApplicationContext.Provider>
+      <ApplicationProvider>
+        <AppRoutes />
+      </ApplicationProvider>
     </div>
   )
 }

@@ -8,22 +8,26 @@ import { TfiPanel } from 'react-icons/tfi';
 
 export default function () {
 
-  const { name } = useContext(ApplicationContext);
+  const { tab, changeTab } = useContext(ApplicationContext);
   
   const options = [
     {
+      id: 0,
       name: 'Painel',
       icon: <TfiPanel/>
     },
     {
+      id: 1,
       name: 'Meus Cursos',
       icon: <BsBook/>
     },
     {
+      id: 2,
       name: 'Mercado',
       icon: <AiOutlineShoppingCart/>
     },
     {
+      id: 3,
       name: 'Adicionais',
       icon: <AiOutlinePlusCircle/>
     }
@@ -31,7 +35,7 @@ export default function () {
 
   const optionsMap = options.map(opt => {
     return <li className='bg-gray-50 py-3 px-4 drop-shadow-sm border flex items-center gap-x-3 hover:bg-gray-100'
-      key={opt.name}>
+      key={opt.name} onClick={() => changeTab(opt.id)}>
       
       {opt.icon}{opt.name}
     </li>
@@ -42,7 +46,7 @@ export default function () {
         
       <div className='flex flex-col my-5 px-5'>
         <h1 className="text-2xl font-bold">Studev</h1>
-        <p className='text-md font-light'>Olá {name}, seja bem vindo!</p>
+        <p className='text-md font-light'>Olá Name, seja bem vindo!</p>
       </div>
 
       <ul className=' cursor-pointer font-medium w-full'>

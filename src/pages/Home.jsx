@@ -1,13 +1,21 @@
+import { useContext } from 'react';
+
 import Header from './template/Header';
 import SideBar from './template/SideBar';
 
 import Course from './home/Courses';
 import Panel from './home/Panel';
+import Marketplace from './home/Marketplace';
+import More from './home/More';
+
+import { ApplicationContext } from '../contexts/Application';
 
 export default function () {
 
+  const { tab, changeTab } = useContext(ApplicationContext);
+
   const main = [
-    <Course />, <Panel />
+    <Panel />, <Course />, <Marketplace />, <More />
   ];
 
   const mainSelect = 0;
@@ -17,8 +25,8 @@ export default function () {
       <Header/>
       <div className='flex'>
         <SideBar/>
-        <section className=" pt-[5rem] w-full">
-          {main[mainSelect]}
+        <section className="pt-[5rem] w-full">
+          {main[tab]}
         </section>
       </div>
     </div>
